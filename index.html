@@ -6,7 +6,8 @@
 <title>Scale Turnkey Contractor | Design to Handover, One Point of Contact</title>
 <meta name="description" content="Scale Turnkey Contractor delivers full-scope fit-out and construction — design, MEP, civil, finishes and handover — for residential, commercial, healthcare, hospitality, retail, education, government and real estate projects.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,7 +21,7 @@
         <span class="logo-tagline">SPACE THAT DEFINES YOU</span>
       </div>
     </a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-menu">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="services.html">Services</a></li>
@@ -29,7 +30,7 @@
     </ul>
     <div class="nav-cta">
       <a href="contact.html" class="btn btn-primary">Get a Quote</a>
-      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
 </header>
@@ -40,14 +41,14 @@
     <h1>One contractor. Every discipline. One continuous line from concept to handover.</h1>
     <p class="hero-sub">Scale Turnkey Contractor plans, builds and finishes complete spaces — civil, electrical, HVAC, ceilings, flooring, furniture and technology — under a single point of accountability.</p>
     <div class="hero-actions">
-      <a href="portfolio.html" class="btn btn-gold">View Our Work</a>
+      <a href="portfolio.html" class="btn btn-primary">View Our Work</a>
       <a href="contact.html" class="btn btn-light">Get a Quote</a>
     </div>
   </div>
 </section>
 
 <!-- Sectors served -->
-<section class="section-tight gradient-field">
+<section class="section-tight">
   <div class="container">
     <div class="section-head center">
       <span class="eyebrow">Who We Build For</span>
@@ -106,9 +107,9 @@
       <h2>A selection of completed projects</h2>
     </div>
     <div class="gallery-grid">
-      <div class="gallery-item"><img src="images/portfolio_villa.jpg" alt="Residential interior fit-out"><div class="gallery-tag">Residential — Villa Interior</div></div>
-      <div class="gallery-item"><img src="images/portfolio_office.jpg" alt="Corporate office fit-out"><div class="gallery-tag">Commercial — Corporate HQ</div></div>
-      <div class="gallery-item"><img src="images/portfolio_healthcare.jpg" alt="Hospital interior build"><div class="gallery-tag">Health Care — Diagnostic Centre</div></div>
+      <div class="gallery-item"><img src="images/portfolio_villa.jpg" alt="Luxury residential villa interior fit-out with bespoke woodwork and lighting"><div class="gallery-tag">Residential — Villa Interior</div></div>
+      <div class="gallery-item"><img src="images/portfolio_office.jpg" alt="Modern corporate office headquarters fit-out with dynamic glass partitions"><div class="gallery-tag">Commercial — Corporate HQ</div></div>
+      <div class="gallery-item"><img src="images/portfolio_healthcare.jpg" alt="State-of-the-art medical diagnostic centre interior fit-out"><div class="gallery-tag">Health Care — Diagnostic Centre</div></div>
     </div>
     <div style="text-align:center;margin-top:44px;">
       <a href="portfolio.html" class="btn btn-primary">View Full Portfolio</a>
@@ -195,6 +196,8 @@
   <svg viewBox="0 0 24 24"><path d="M17.6 6.3A8.7 8.7 0 0 0 12 4a8.8 8.8 0 0 0-7.6 13.2L3 21l3.9-1.3A8.8 8.8 0 0 0 12 20.8 8.8 8.8 0 0 0 17.6 6.3zM12 19.2a7.2 7.2 0 0 1-3.7-1l-.3-.2-2.4.8.8-2.3-.2-.3A7.3 7.3 0 1 1 12 19.2zm4-5.4c-.2-.1-1.3-.6-1.5-.7s-.4-.1-.5.1-.6.7-.7.9-.3.2-.5.1a5.9 5.9 0 0 1-1.7-1.1 6.5 6.5 0 0 1-1.2-1.5c-.1-.2 0-.3.1-.4l.3-.4.2-.3v-.3c0-.1-.5-1.2-.7-1.7s-.4-.4-.5-.4h-.4a.9.9 0 0 0-.6.3 2.7 2.7 0 0 0-.8 2 4.6 4.6 0 0 0 1 2.5 10.6 10.6 0 0 0 4 3.6c.6.2 1 .4 1.4.5a3.4 3.4 0 0 0 1.5.1 2.5 2.5 0 0 0 1.6-1.1 2 2 0 0 0 .1-1.1c0-.1-.2-.2-.4-.3z"/></svg>
 </a>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
