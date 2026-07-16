@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Stagger grids as they scroll into view
     animateOnScroll('.sector-card', '.sector-grid', 0.08);
     animateOnScroll('.continuum-stop', '.continuum-track', 0.06);
-    animateOnScroll('.gallery-item', '.gallery-grid', 0.08);
+    animateOnScroll('.gallery-item', document.querySelector('.gallery-grid-teaser') ? '.gallery-grid-teaser' : '.gallery-grid', 0.08);
     animateOnScroll('.stat-item', '.stat-band', 0.08);
     animateOnScroll('.feature-card', '.feature-grid', 0.08);
     animateOnScroll('.team-card', '.team-grid', 0.08);
@@ -230,4 +230,36 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 1200);
     });
   }
+
+  // --- Hash Scroll & Highlight Animation ---
+  const handleHashChange = () => {
+    const hash = window.location.hash;
+    if (hash) {
+      const targetElement = document.querySelector(hash);
+      if (targetElement) {
+        setTimeout(() => {
+          // Calculate offset position to account for the sticky header (height ~82px) + breathing room
+          const header = document.querySelector('.site-header');
+          const headerHeight = header ? header.offsetHeight : 82;
+          const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+          const offsetPosition = elementPosition - headerHeight - 24; // 24px extra breathing room
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+
+          targetElement.classList.add('highlight-flash');
+          setTimeout(() => {
+            targetElement.classList.remove('highlight-flash');
+          }, 2200);
+        }, 300);
+      }
+    }
+  };
+
+  if (window.location.hash) {
+    handleHashChange();
+  }
+  window.addEventListener('hashchange', handleHashChange);
 });
